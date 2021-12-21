@@ -30,17 +30,23 @@ console.log(`
 
 /**
  * Return a random number from 0 to `n`
- * @param {number} n
- * @return {number}
+ * @param {number} n the maximum value
+ * @return {number} returns a random number from 0 to `n`
  */
 const random = n => Math.round(Math.random() * n);
 
+//DocBlock - Documentation-Block - DocComment
 /**
  * Return a random item from an array
  * @param {string[]} array
  * @return {string}
  */
 const randomItem = array => array[random(array.length - 1)];
+
+// function randomItem_ (currywurst){
+//     return currywurst[random(currywurst.length - 1)];
+// };
+
 
 // We will use the arrays below to generate random names and images
 // First  names

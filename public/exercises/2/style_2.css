@@ -1,0 +1,58 @@
+:root {
+    --primary-color: hsl(353, 100%, 97%);
+    --secondary-color: hsl(350, 100%, 40%);
+    --tertiary-color: pink;
+    --font-color: hsl(0, 0%, 30%);
+}
+
+ @media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: rgba(255, 192, 203, 0.164);
+        --secondary-color: hsl(350, 100%, 40%);
+        --tertiary-color: pink;
+        --font-color: black;
+    } 
+} 
+* {
+    box-sizing: border-box;
+    font-family: 'Twinkle Star', cursive;
+}
+body {
+    margin: 0;
+    background: var(--secondary-color);
+    color: var(--font-color);
+}
+
+.card {
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: 20px 20px;
+    background: var(--primary-color);
+
+}
+.card-header {
+    background: var(--tertiary-color);
+
+}
+
+/* .card-title {
+
+}
+.card-image-container {
+
+}
+.card-image {
+
+}
+.card-content-container {
+
+}
+.card-content-title {
+
+}
+.card-list {
+
+}
+.card-list-item {
+
+} */

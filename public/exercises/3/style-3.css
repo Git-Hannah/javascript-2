@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: hsl(199, 80%, 89%);
+}
+
+.Grid {
+  display: grid;
+  gap: 1rem;
+  max-width: 60rem;
+  margin: auto;
+  padding: 3rem;
+}
+
+.Card {
+  padding: 1rem;
+  border-radius: 3rem;
+  background-color: #fff;
+  color: darkblue;
+}
+
+.Card-header {
+  border-bottom: 1px dotted darkblue;
+}
+.Card-media {
+    margin: 0;
+}
+
+.Card-media img {
+    display:block;
+    width: 50%;
+    margin: 1rem auto;
+}

@@ -28,39 +28,38 @@ console.log(`
 - Use the font for your card
 `);
 
-function myRandom(number) {
-  return Math.round(Math.random() * number);
+function randomN(n) {
+  return Math.round(Math.random() * n);
 }
-console.log(myRandom(100));
+console.log(randomN(1_000_000));
 
 const firstNames = ["Max", "Dara", "Kim", "Kai", "Mar", "Jul"];
 const lastNames = ["Müller", "Rodriguez", "Chu", "Poirot", "Evans"];
 
 function randomItem(array) {
-  const maxIndex = array.length - 1;
-  const randomIndex = myRandom(maxIndex);
+  const maxIndex = array.length - 1; //letzte Position
+  const randomIndex = randomN(maxIndex);
   return array[randomIndex];
 }
-console.log(randomItem(firstNames), randomItem(lastNames));
+console.log(randomItem(lastNames));
+
 
 document.querySelector("#root").innerHTML += /*html*/ `
-<div class="card">
-    <header class="card-header">
-      <h3 class="card-title">${randomItem(firstNames)} ${randomItem(lastNames)}</h3>
-      <figure class="card-image-container">
-        <img class="card-image"
-          src="https://randomuser.me/api/portraits/women/${myRandom(50)}.jpg" 
-          alt="image of a random person" />  
-       </figure>
+    <card id="root">
+    <header>
+        <h3>
+        </h3>
     </header>
-    <div class="card-content-container">
-      <h4 class="card-content-title">My hobbies</h4>
-        <ul class="card-list">
-          <li class="card-list-item">Dancing</li>
-          <li class="card-list-item">Playing Ukulele</li>
-          <li class="card-list-item">Mime</li>
-          <li class="card-list-item">Clowning</li>
-        </ul>
+    <figure>
+        <img src="" alt="" />
+    </figure>
+    <div>
+    
+    
     </div>
-</div>
+    
+    
+    </card>
+
+
 `;
