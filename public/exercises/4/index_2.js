@@ -18,3 +18,4 @@ console.log(`
 4. On reload show a text "You are subscribed" if the localStorage key exists
 - The form should not be visible
 `);
+

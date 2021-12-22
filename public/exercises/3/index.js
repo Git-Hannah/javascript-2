@@ -38,7 +38,10 @@ function randomItem(array) {
 const cards = Array.from({ length: 4 });
 const people = cards.map(() => {
   return {
-    name: randomItem(firstNames) + " " + randomItem(lastNames),
+    // The next three lines do the same, with a different technique:
+    //name: randomItem(firstNames) + " " + randomItem(lastNames),
+    //name: [randomItem(firstNames), randomItem(lastNames)].join(" "),
+    name: `${randomItem(firstNames)} ${randomItem(lastNames)}`,
     //gender: randomItem(gender),
     image: `https://randomuser.me/api/portraits/${randomItem(
       gender

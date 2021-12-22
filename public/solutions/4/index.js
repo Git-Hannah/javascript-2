@@ -37,6 +37,10 @@ if (stored) {
     Email:
     <input name="email" type="email"/>
 </label>
+<label>
+    Name:
+    <input name="name" type="text"/>
+</label>
 <button type="submit">Subscribe</button>
 `;
 
@@ -44,6 +48,7 @@ if (stored) {
     event_.preventDefault();
     const formData = new FormData(event_.target);
     const formProps = Object.fromEntries(formData);
+    console.log(formData, formProps);
     console.log(formProps.email);
     window.localStorage.setItem(STORAGE_KEY, formProps.email);
     const note = document.createElement("p");
